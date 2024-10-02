@@ -89,7 +89,7 @@ const AnalyticsDashboard = ({
                   countryCode={countryCode}
                 />
 
-                <p className='text-tremor-content sm:text-dark-tremor-content-strong'>
+                <p className=' text-tremor-content sm:text-dark-tremor-content-strong'>
                   {number}
                 </p>
               </div>
