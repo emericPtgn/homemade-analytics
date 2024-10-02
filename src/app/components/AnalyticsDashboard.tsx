@@ -58,15 +58,15 @@ const AnalyticsDashboard = ({ avgVisitorsPerDay, amtVisitorsToday, timeseriesPag
                 This weeks top visitors:
             </h2>
             <div className="col-span-3 flex items-center justify-between flex-wrap gap-8">
-                {topCountries?.map(([countryCode, number]) => {
-                    return <div className="flex items-enter gap-3 text-dark-tremor-content-strong">
-                        <p className="hidden sm:block text-tremor-content">
-                            {countryCode}
-                        </p>
-                        <ReactCountryFlag className="text-5xl sm:text-3xm" svg countryCode={countryCode}/>
-                        <p className="text-tremor-content sm:text-dark-tremor-content-strong">{number}</p>
-                    </div>
-                })}
+            {topCountries?.map(([countryCode, number]) => {
+                return <div key={countryCode} className="flex items-enter gap-3 text-dark-tremor-content-strong">
+                    <p className="hidden sm:block text-tremor-content">
+                        {countryCode}
+                    </p>
+                    <ReactCountryFlag className="text-5xl sm:text-3xm" svg countryCode={countryCode}/>
+                    <p className="text-tremor-content sm:text-dark-tremor-content-strong">{number}</p>
+                </div>
+            })}
             </div>
         </Card>
         <Card>
